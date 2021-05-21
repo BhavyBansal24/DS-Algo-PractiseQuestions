@@ -11,26 +11,22 @@ int main(){
     int t;
     cin >> t;
     while(t--){
-        int n;
+        int n=0;
         cin >> n;
-        int arr[n];
+        int a[n];
 
-        for(int i = 0;i<n;i++){
-            cin >> arr[i];
-        }
-        int x; // rotation no of times
+        int x=0;
         cin >> x;
 
-        int t=0;
-        for(int i=0;i<x;i++){
-            t=arr[0];
-            for(int j=0;j<n-1;j++){     
-                arr[j] = arr[j+1];
-            }
-            arr[n-1] = t;
+        for(int i=n-x;i<n;i++){
+            cin >> a[i];
+        }
+        for(int i=0;i<n-x;i++){
+            cin >> a[i];
         }
         for(int i=0;i<n;i++){
-            cout << arr[i] << " ";
+            cout << a[i] << " ";
         }
+        cout << endl;
     }
 }
